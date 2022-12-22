@@ -11,4 +11,4 @@ cortex-m-rt = "0.7.1"
 stm32f1xx-hal = "0.9.0"
 
 [features]
-default = ["stm32f1xx-hal/stm32f103", "stm32f1xx-hal/medium"]
+default = ["stm32f1xx-hal/stm32f103", "stm32f1xx-hal/medium", "stm32f1xx-hal/rt"]

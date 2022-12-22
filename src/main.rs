@@ -24,8 +24,8 @@ fn main() -> ! {
 
     loop {
         pc13.set_low();
-        delay.delay_ms(1000u32);
+        delay.delay_ms(200u32);
         pc13.set_high();
-        delay.delay_ms(1000u32);
+        delay.delay_ms(200u32);
     }
 }
