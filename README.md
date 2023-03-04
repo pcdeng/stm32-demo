@@ -68,3 +68,5 @@ Info : Listening on port 3333 for gdb connections
 [Discovery](https://jzow.github.io/discovery/microbit/index.html)
 
 [stm32f1xx-hal](https://github.com/stm32-rs/stm32f1xx-hal)
+
+[Rust嵌入式开发入门](https://space.bilibili.com/500416539/channel/collectiondetail?sid=177577)
