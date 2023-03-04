@@ -2,7 +2,7 @@
 ## 前置准备
 |  项   | 备注  |
 |  ----  | ----  |
-| 作系统  | macOS 10.14.6 | 
+| 操作系统  | macOS 10.14.6 | 
 | 编辑器 | Visual Studio Code |
 | 目标芯片  | STM32F103C8T6 |
 | 仿真器 | CMSIS-DAP |
