@@ -1,10 +1,13 @@
 #![no_std]
 #![no_main]
 
+// use panic_halt as _;
+
 use core::panic::PanicInfo;
 use cortex_m_rt::entry;
 use stm32f1xx_hal::prelude::*;
 use stm32f1xx_hal::stm32 as device;
+use cortex_m_semihosting::hprintln;
 
 #[panic_handler]
 fn my_panic_handler(_panic: &PanicInfo) -> ! {
@@ -22,10 +25,12 @@ fn main() -> ! {
     let mut pc13 = gpio_c.pc13.into_push_pull_output(&mut gpio_c.crh);
     let mut delay = cp.SYST.delay(&clocks);
 
+    hprintln!("hello world").unwrap();
+
     loop {
         pc13.set_low();
-        delay.delay_ms(200u32);
+        delay.delay_ms(500u32);
         pc13.set_high();
-        delay.delay_ms(200u32);
+        delay.delay_ms(500u32);
     }
 }

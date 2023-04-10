@@ -5,6 +5,10 @@
 # runner = "gdb-multiarch -q -x openocd.gdb"
 # runner = "cargo flash --chip stm32f103C8 --release"
 # runner = "gdb -q -x openocd.gdb"
+runner = 'arm-none-eabi-gdb'
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
 
 
 [build]
@@ -14,7 +18,7 @@ target = "thumbv7m-none-eabi"    # Cortex-M3
 # target = "thumbv7em-none-eabi"   # Cortex-M4 and Cortex-M7 (no FPU)
 # target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
 
-rustflags = [ "-C", "link-arg=-Tlink.x"]
+
   # LLD (shipped with the Rust toolchain) is used as the default linker
 
   # if you run into problems with LLD switch to the GNU linker by commenting out
