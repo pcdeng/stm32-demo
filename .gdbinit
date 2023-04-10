@@ -15,3 +15,5 @@ monitor arm semihosting enable
 # monitor itm port 0 on
 
 load
+
+continue
