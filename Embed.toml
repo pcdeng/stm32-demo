@@ -1,0 +1,22 @@
+[default.general]
+# 指定目标芯片型号
+chip = "STM32F103C8Tx"
+
+# 可选：指定调试协议和速度（ST-Link 通常使用 SWD）
+[default.probe]
+protocol = "Swd"          # 调试协议：Swd 或 Jtag[9](@ref)
+# speed = 4000            # 调试速度（kHz），如遇连接问题可调整
+
+[default.flashing]
+enabled = true            # 启用刷写功能
+
+[default.reset]
+halt_afterwards = false    # 复位后暂停，便于调试
+
+# 如需 RTT 输出或 GDB 调试，可启用以下部分
+[default.rtt]
+enabled = false
+#
+[default.gdb]
+enabled = false
+# gdb_connection_string = ":1337"
